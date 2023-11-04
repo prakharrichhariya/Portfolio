@@ -7,7 +7,7 @@
 		"jest/globals": true,
 		"node": true
 	},
-	"ignorePatterns": ["prettier.config.js", "public"],
+	"ignorePatterns": ["prettier.config.js", "public", "node_modules"],
 	"settings": { "react": { "version": "detect" } },
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
@@ -24,7 +24,6 @@
 		"eslint-plugin-prefer-arrow",
 		"eslint-plugin-react",
 		"header",
-		"jest",
 		"react"
 	],
 	"extends": [

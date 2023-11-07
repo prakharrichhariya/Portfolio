@@ -40,19 +40,17 @@ const App: React.FC = () => {
 					},
 				}}
 			>
-				<div className='app' id={initialLoad ? 'no-scroll' : 'scroll'}>
+				<div className='App' id={initialLoad ? 'no-scroll' : 'scroll'}>
 					<NavBar />
-					<div className='main-app'>
-						<ScrollToTop />
-						<Routes>
-							<Route path='/' element={<Home />} />
-							<Route path='/project' element={<Projects />} />
-							<Route path='/about' element={<About />} />
-							<Route path='/experience' element={<Experience />} />
-							<Route path='/resume' element={<Resume />} />
-							<Route path='*' element={<Navigate to='/' />} />
-						</Routes>
-					</div>
+					<ScrollToTop />
+					<Routes>
+						<Route path='/' element={<Home />} />
+						<Route path='/project' element={<Projects />} />
+						<Route path='/about' element={<About />} />
+						<Route path='/experience' element={<Experience />} />
+						<Route path='/resume' element={<Resume />} />
+						<Route path='*' element={<Navigate to='/' />} />
+					</Routes>
 					<Footer />
 				</div>
 			</ConfigProvider>

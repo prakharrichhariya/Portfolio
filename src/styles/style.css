@@ -387,14 +387,21 @@ button:focus {
 /* --------- */
 .project-section {
 	position: relative !important;
-	padding-top: 95px !important;
+	padding-top: 110px !important;
 	padding-bottom: 50px !important;
 	background-image: var(--section-background-color) !important;
 }
 
+@media (max-width: 767px) {
+	.project-section {
+		padding-top: 120px !important;
+		padding-bottom: 75px !important;
+	}
+}
+
 .project-card {
-	padding-top: 22px !important;
-	padding-bottom: 22px !important;
+	padding-top: 25px !important;
+	padding-bottom: 25px !important;
 	padding-left: 25px !important;
 	padding-right: 25px !important;
 	height: auto !important;
@@ -553,6 +560,13 @@ button:focus {
 	color: white !important;
 }
 
+@media (max-width: 767px) {
+	.resume-section {
+		padding-top: 120px !important;
+		padding-bottom: 120px !important;
+	}
+}
+
 .resume {
 	padding-top: 50px;
 	padding-bottom: 50px;
@@ -647,6 +661,13 @@ button:focus {
 	padding-right: 35px !important;
 }
 
+@media (max-width: 767px) {
+	.work-ex-timeline .ant-timeline-item-label {
+		width: calc(35% - 20px) !important;
+		padding-right: 20px !important;
+	}
+}
+
 .work-ex-timeline .ant-timeline-item-tail {
 	inset-inline-start: 32% !important;
 }
@@ -658,6 +679,13 @@ button:focus {
 .work-ex-timeline .ant-timeline-item-content {
 	inset-inline-start: calc(32% + 20px) !important;
 	width: 68% !important;
+}
+
+@media (max-width: 767px) {
+	.work-ex-timeline .ant-timeline-item-content {
+		inset-inline-start: calc(32% + 15px) !important;
+		width: 58% !important;
+	}
 }
 
 .work-ex-timeline .ant-timeline-item {

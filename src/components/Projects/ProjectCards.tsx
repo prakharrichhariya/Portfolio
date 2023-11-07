@@ -19,7 +19,7 @@ const ProjectCards: React.FC<IProps> = (props) => {
 			<Card.Img variant='top' src={props.imgPath} alt='card-img' />
 			<Card.Body className='flex-col-align-center'>
 				<Card.Title style={{ color: '#c770f0' }}>{props.title}</Card.Title>
-				<Card.Text style={{ textAlign: 'justify' }}>{props.description}</Card.Text>
+				<Card.Text style={{ textAlign: 'center' }}>{props.description}</Card.Text>
 				<Card.Text style={{ justifyContent: 'center' }}>
 					{props.techStack.map((item) => (
 						<Tag color='#c770f0' key={item}>

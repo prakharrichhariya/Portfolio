@@ -39,7 +39,7 @@ const Home: React.FC = () => {
 							</div>
 						</Col>
 
-						<Col md={5} style={{ paddingBottom: 20 }}>
+						<Col md={5} style={{ paddingBottom: 20, display: 'flex', justifyContent: 'center' }}>
 							<img
 								src={'home-main.svg'}
 								alt='home-pic'

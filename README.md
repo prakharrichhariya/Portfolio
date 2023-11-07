@@ -1,6 +1,6 @@
 # Portfolio
 
-This is my personal portfolio created with ReactJS, Typescript and AntD.
+This is my personal portfolio created with ReactJS, Typescript, React Bootstrap and AntD.
 
 # Getting Started with Create React App
 

@@ -222,6 +222,15 @@ button:focus {
 	padding-bottom: 30px !important;
 	padding-top: 30px !important;
 	background-size: cover;
+	min-height: calc(100vh - 58px);
+	height: calc(100% - 58px);
+}
+
+@media (max-width: 767px) {
+	.home-section {
+		min-height: calc(100vh - 90px);
+		height: calc(100% - 90px);
+	}
 }
 
 .home-content {
@@ -404,10 +413,15 @@ button:focus {
 	padding-top: 110px !important;
 	padding-bottom: 50px !important;
 	background-image: var(--section-background-color) !important;
+	background-size: cover;
+	min-height: calc(100vh - 58px);
+	height: calc(100% - 58px);
 }
 
 @media (max-width: 767px) {
 	.project-section {
+		min-height: calc(100vh - 90px);
+		height: calc(100% - 90px);
 		padding-top: 120px !important;
 		padding-bottom: 75px !important;
 	}
@@ -511,7 +525,17 @@ button:focus {
 	padding-top: 70px !important;
 	padding-bottom: 20px !important;
 	background-image: var(--section-background-color) !important;
+	background-size: cover;
 	color: white !important;
+	min-height: calc(100vh - 58px);
+	height: calc(100% - 58px);
+}
+
+@media (max-width: 767px) {
+	.about-section {
+		min-height: calc(100vh - 90px);
+		height: calc(100% - 90px);
+	}
 }
 
 .tech-icons {
@@ -571,13 +595,18 @@ button:focus {
 	padding-top: 110px !important;
 	padding-bottom: 75px !important;
 	background-image: var(--section-background-color) !important;
+	background-size: cover;
 	color: white !important;
+	min-height: calc(100vh - 58px);
+	height: calc(100% - 58px);
 }
 
 @media (max-width: 767px) {
 	.resume-section {
 		padding-top: 120px !important;
 		padding-bottom: 120px !important;
+		min-height: calc(100vh - 90px);
+		height: calc(100% - 90px);
 	}
 }
 

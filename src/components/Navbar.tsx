@@ -8,19 +8,22 @@ import { Navbar } from 'react-bootstrap';
 import React, { useState } from 'react';
 import { AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from 'react-icons/ai';
 import { CgFileDocument } from 'react-icons/cg';
+import { MdWorkOutline } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import PersonalLogo from './PersonalLogo';
 
 const NavBar: React.FC = () => {
 	const [expanded, setExpanded] = useState<boolean>(false);
 	const [navColor, setNavColor] = useState(false);
+	const [activePage, setactivePage] = useState<string>('home');
 
-	function scrollHandler() {
+	const scrollHandler = () => {
 		if (window.scrollY >= 20) {
 			setNavColor(true);
 		} else {
 			setNavColor(false);
 		}
-	}
+	};
 
 	window.addEventListener('scroll', scrollHandler);
 
@@ -28,7 +31,7 @@ const NavBar: React.FC = () => {
 		<Navbar expanded={expanded} fixed='top' expand='md' className={navColor ? 'sticky' : 'navbar'}>
 			<Container>
 				<Navbar.Brand href='/' className='d-flex'>
-					<img src='./logo192.png' className='img-fluid logo' alt='brand' />
+					<PersonalLogo />
 				</Navbar.Brand>
 				<Navbar.Toggle
 					aria-controls='responsive-navbar-nav'
@@ -43,25 +46,71 @@ const NavBar: React.FC = () => {
 				<Navbar.Collapse id='responsive-navbar-nav'>
 					<Nav className='ms-auto' defaultActiveKey='#home'>
 						<Nav.Item>
-							<Nav.Link as={Link} to='/' onClick={() => setExpanded(false)}>
+							<Nav.Link
+								className={activePage === 'home' ? 'active-nav-bar-item' : ''}
+								as={Link}
+								to='/'
+								onClick={() => {
+									setExpanded(false);
+									setactivePage('home');
+								}}
+							>
 								<AiOutlineHome style={{ marginBottom: '2px' }} /> Home
 							</Nav.Link>
 						</Nav.Item>
 
 						<Nav.Item>
-							<Nav.Link as={Link} to='/about' onClick={() => setExpanded(false)}>
+							<Nav.Link
+								className={activePage === 'about' ? 'active-nav-bar-item' : ''}
+								as={Link}
+								to='/about'
+								onClick={() => {
+									setExpanded(false);
+									setactivePage('about');
+								}}
+							>
 								<AiOutlineUser style={{ marginBottom: '2px' }} /> About
 							</Nav.Link>
 						</Nav.Item>
 
 						<Nav.Item>
-							<Nav.Link as={Link} to='/project' onClick={() => setExpanded(false)}>
+							<Nav.Link
+								className={activePage === 'experience' ? 'active-nav-bar-item' : ''}
+								as={Link}
+								to='/experience'
+								onClick={() => {
+									setExpanded(false);
+									setactivePage('experience');
+								}}
+							>
+								<MdWorkOutline style={{ marginBottom: '2px' }} /> Experience
+							</Nav.Link>
+						</Nav.Item>
+
+						<Nav.Item>
+							<Nav.Link
+								className={activePage === 'project' ? 'active-nav-bar-item' : ''}
+								as={Link}
+								to='/project'
+								onClick={() => {
+									setExpanded(false);
+									setactivePage('project');
+								}}
+							>
 								<AiOutlineFundProjectionScreen style={{ marginBottom: '2px' }} /> Projects
 							</Nav.Link>
 						</Nav.Item>
 
 						<Nav.Item>
-							<Nav.Link as={Link} to='/resume' onClick={() => setExpanded(false)}>
+							<Nav.Link
+								className={activePage === 'resume' ? 'active-nav-bar-item' : ''}
+								as={Link}
+								to='/resume'
+								onClick={() => {
+									setExpanded(false);
+									setactivePage('resume');
+								}}
+							>
 								<CgFileDocument style={{ marginBottom: '2px' }} /> Resume
 							</Nav.Link>
 						</Nav.Item>

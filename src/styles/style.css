@@ -44,7 +44,7 @@ button:focus {
 /* --------- */
 
 ::-webkit-scrollbar {
-	width: 7px;
+	width: 5px;
 }
 
 /* Track */
@@ -64,9 +64,6 @@ button:focus {
 	border-radius: 12px;
 }
 
-/* --------- */
-/* Navbar Section  */
-/* --------- */
 .sticky {
 	background-color: #1b1a2ea9 !important;
 	transition: all 0.3s ease-out 0s !important;
@@ -151,10 +148,18 @@ button:focus {
 	width: 2.5em !important;
 }
 
+.active-nav-bar-item {
+	color: rgba(222, 130, 235, 0.911) !important;
+}
+
 .navbar-nav .nav-link {
-	color: white !important;
+	color: white;
 	padding-right: 1rem !important;
 	padding-left: 1rem !important;
+}
+
+.navbar-nav .nav-item a:hover {
+	color: white;
 }
 
 .nav-link {
@@ -195,51 +200,6 @@ button:focus {
 
 .navbar-nav .nav-item a:hover::after {
 	width: 100%;
-}
-
-/* --------- */
-/* Home section */
-/* --------- */
-.wave {
-	animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-	animation-duration: 2.1s; /* Change to speed up or slow down */
-	animation-iteration-count: infinite; /* Never stop waving :) */
-	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-	display: inline-block;
-}
-
-@keyframes wave-animation {
-	0% {
-		transform: rotate(0deg);
-	}
-	10% {
-		transform: rotate(14deg);
-	} /* The following five values can be played with to make the waving more or less extreme */
-	20% {
-		transform: rotate(-8deg);
-	}
-	30% {
-		transform: rotate(14deg);
-	}
-	40% {
-		transform: rotate(-4deg);
-	}
-	50% {
-		transform: rotate(10deg);
-	}
-	60% {
-		transform: rotate(0deg);
-	} /* Reset for the last half to pause */
-	100% {
-		transform: rotate(0deg);
-	}
-}
-#tsparticles {
-	position: fixed !important;
-	background-repeat: no-repeat !important;
-	background-size: cover !important;
-	width: 100%;
-	height: 100%;
 }
 
 .home-header {
@@ -297,18 +257,6 @@ button:focus {
 	}
 }
 
-.myAvtar {
-	justify-content: center !important;
-	padding-top: 9em !important;
-}
-
-@media (max-width: 767px) {
-	.myAvtar {
-		padding-top: 2em !important;
-		padding-bottom: 2em !important;
-	}
-}
-
 .home-about-section {
 	position: relative;
 	padding-bottom: 70px !important;
@@ -330,7 +278,7 @@ button:focus {
 
 .home-about-social {
 	text-align: center !important;
-	padding-top: 25px;
+	padding-top: 15px;
 	color: white !important;
 }
 
@@ -395,7 +343,8 @@ button:focus {
 /* --------- */
 .footer {
 	background-color: rgb(10, 4, 22);
-	bottom: 0 !important;
+	bottom: 0px !important;
+	position: fixed;
 	padding-top: 10px !important;
 	padding-bottom: 8px !important ;
 }
@@ -438,17 +387,19 @@ button:focus {
 /* --------- */
 .project-section {
 	position: relative !important;
-	padding-top: 150px !important;
-	padding-bottom: 30px !important;
+	padding-top: 95px !important;
+	padding-bottom: 50px !important;
 	background-image: var(--section-background-color) !important;
 }
 
 .project-card {
-	padding-top: 50px !important;
-	padding-bottom: 50px !important;
+	padding-top: 22px !important;
+	padding-bottom: 22px !important;
 	padding-left: 25px !important;
 	padding-right: 25px !important;
 	height: auto !important;
+	display: flex;
+	justify-content: center;
 }
 
 .project-card-view {
@@ -536,8 +487,8 @@ button:focus {
 
 .about-section {
 	position: relative !important;
-	padding-top: 150px !important;
-	padding-bottom: 30px !important;
+	padding-top: 70px !important;
+	padding-bottom: 20px !important;
 	background-image: var(--section-background-color) !important;
 	color: white !important;
 }
@@ -597,7 +548,7 @@ button:focus {
 .resume-section {
 	position: relative !important;
 	padding-top: 110px !important;
-	padding-bottom: 30px !important;
+	padding-bottom: 75px !important;
 	background-image: var(--section-background-color) !important;
 	color: white !important;
 }
@@ -677,59 +628,72 @@ button:focus {
 	border: 2px solid #8a49a8;
 }
 
-.like-item {
-	padding-top: 10px !important;
-	font-size: 1.1em !important;
-	font-family: sans-serif !important;
+.resume-document .react-pdf__Page__textContent {
+	display: none;
 }
 
-.like-btn {
-	background-color: #934cce5e !important;
-	border-color: #934cce5e !important;
-	padding: 0.25rem 0.98rem !important;
-	border-radius: 5px !important;
-	line-height: 1.4 !important;
-	transition: 0.3s ease !important;
+.work-ex-logo {
+	width: 45px;
+	height: 40px;
+	border-radius: 50%;
 }
 
-.like-btn:hover {
-	transform: translateY(-2px) !important;
-	background-color: #a24dd386 !important;
-	border-color: #a24dd386 !important;
+.work-ex-timeline .ant-timeline-item-head {
+	border-radius: 50%;
 }
 
-.animate-like {
-	animation-name: likeAnimation;
-	animation-fill-mode: forwards;
-	animation-duration: 0.85s;
-}
-@keyframes likeAnimation {
-	0% {
-		transform: scale(1.5);
-	}
-	100% {
-		transform: scale(1);
-	}
+.work-ex-timeline .ant-timeline-item-label {
+	width: calc(35% - 20px) !important;
+	padding-right: 35px !important;
 }
 
-.fork-btn {
-	font-size: 1.1em !important;
-	padding-top: 10px !important;
+.work-ex-timeline .ant-timeline-item-tail {
+	inset-inline-start: 32% !important;
 }
 
-.fork-btn-inner {
-	line-height: 1.4em !important;
-	background-color: #934cce5e !important;
-	padding: 0.25rem 1.1rem !important;
-	vertical-align: middle !important;
-	text-align: center !important;
+.work-ex-timeline .ant-timeline-item-head-custom {
+	inset-inline-start: 32% !important;
 }
 
-.fork-btn-inner:hover {
-	transform: translateY(-2px) !important;
-	background-color: #a24dd386 !important;
-	border-color: #a24dd386 !important;
+.work-ex-timeline .ant-timeline-item-content {
+	inset-inline-start: calc(32% + 20px) !important;
+	width: 68% !important;
 }
-.fork-btn-inner::after {
-	display: none !important;
+
+.work-ex-timeline .ant-timeline-item {
+	padding-bottom: 65px !important;
+}
+
+.work-ex-timeline .ant-timeline-item-head {
+	margin-top: 5px !important;
+}
+
+.work-ex-cards .ant-card-body {
+	padding: 12px 24px;
+}
+
+.work-ex-cards::before {
+	content: ' ';
+	position: absolute;
+	top: 7px;
+	z-index: 1;
+	left: -10px;
+	border: medium solid var(--imp-text-color);
+	border-width: 10px 10px 10px 0;
+	border-color: transparent var(--imp-text-color) transparent transparent;
+}
+
+.project-bootstrap-card {
+	width: 80%;
+	justify-self: center;
+}
+
+.project-bootstrap-card :hover {
+	cursor: pointer;
+}
+
+.flex-col-align-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }

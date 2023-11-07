@@ -7,7 +7,7 @@
 		"jest/globals": true,
 		"node": true
 	},
-	"ignorePatterns": ["prettier.config.js", "public", "node_modules"],
+	"ignorePatterns": ["prettier.config.js", "public", "node_modules", "index.js", "reportWebVitals.js"],
 	"settings": { "react": { "version": "detect" } },
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {

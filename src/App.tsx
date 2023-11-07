@@ -4,15 +4,21 @@
  */
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { DatePicker } from 'antd';
 
 import Preloader from './components/Preloader';
 import NavBar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
+import Footer from './components/Footer';
 
 import './App.css';
 import './styles/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Home/Home';
+import Projects from './components/Projects/Projects';
+import About from './components/About/About';
+import Resume from './components/Resume/ResumeNew';
+import Experience from './components/Experience/Experience';
+import { ConfigProvider } from 'antd';
 
 const App: React.FC = () => {
 	const [initialLoad, setInitialLoad] = useState(true);
@@ -27,22 +33,29 @@ const App: React.FC = () => {
 	return (
 		<BrowserRouter>
 			<Preloader load={initialLoad} />
-			<NavBar />
-			<ScrollToTop />
-			<Routes>
-				<Route path='*' element={<Navigate to='/' />} />
-			</Routes>
-			<div className='App'>
-				<header className='App-header'>
-					<p>
-						Edit <code>src/App.js</code> and save to reload.
-					</p>
-					<DatePicker className='test-datepicker' />
-					<a className='App-link' href='https://reactjs.org' target='_blank' rel='noopener noreferrer'>
-						Learn React
-					</a>
-				</header>
-			</div>
+			<ConfigProvider
+				theme={{
+					token: {
+						colorPrimary: '#c770f0',
+					},
+				}}
+			>
+				<div className='app' id={initialLoad ? 'no-scroll' : 'scroll'}>
+					<NavBar />
+					<div className='main-app'>
+						<ScrollToTop />
+						<Routes>
+							<Route path='/' element={<Home />} />
+							<Route path='/project' element={<Projects />} />
+							<Route path='/about' element={<About />} />
+							<Route path='/experience' element={<Experience />} />
+							<Route path='/resume' element={<Resume />} />
+							<Route path='*' element={<Navigate to='/' />} />
+						</Routes>
+					</div>
+					<Footer />
+				</div>
+			</ConfigProvider>
 		</BrowserRouter>
 	);
 };

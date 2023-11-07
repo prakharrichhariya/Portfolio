@@ -30,8 +30,10 @@ const NavBar: React.FC = () => {
 	return (
 		<Navbar expanded={expanded} fixed='top' expand='md' className={navColor ? 'sticky' : 'navbar'}>
 			<Container>
-				<Navbar.Brand href='/' className='d-flex'>
-					<PersonalLogo />
+				<Navbar.Brand className='d-flex'>
+					<Nav.Link as={Link} to='/'>
+						<PersonalLogo />
+					</Nav.Link>
 				</Navbar.Brand>
 				<Navbar.Toggle
 					aria-controls='responsive-navbar-nav'

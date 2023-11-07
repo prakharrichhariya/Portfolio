@@ -2,6 +2,7 @@
  * @author Prakhar Richhariya <prakhar.richhariya@314ecorp.com>
  * @description About Card for About page
  */
+import { Typography } from 'antd';
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
@@ -10,18 +11,19 @@ const AboutCard: React.FC = () => {
 		<Card className='quote-card-view'>
 			<Card.Body>
 				<blockquote className='blockquote mb-0'>
-					<p style={{ textAlign: 'justify' }}>
-						Hello Everyone, I&apos;m <span className='purple'>Prakhar Richhariya</span>, a passionate and
-						dedicated
-						<span className='purple'> Front-end Developer</span>, currently working at{' '}
-						<span className='purple'>314e Corporation</span>. In my current role, I&apos;m responsible to
-						create clean and responsive user interfaces for two products, one is a cutting-edge training and
-						micro-learning platform, and another one is an advanced interface engine for healthcare
-						organizations.
+					<Typography.Paragraph style={{ textAlign: 'left', fontSize: '1.25rem', color: 'white' }}>
+						Hi! I&apos;m <Typography.Text className='purple'>Prakhar Richhariya</Typography.Text>, a
+						passionate and dedicated
+						<Typography.Text className='purple'> Front-end Developer</Typography.Text>, currently working at{' '}
+						<Typography.Text className='purple'>314e Corporation</Typography.Text>. In my current role,
+						I&apos;m responsible to create clean and responsive user interfaces for two products, one is a
+						cutting-edge training and micro-learning platform, and another one is an advanced interface
+						engine for healthcare organizations.
 						<br />
-						My educational journey began at <span className='purple'>Delhi Public School, Korba</span>, and
-						I earned my bachelor&apos;s degree from the prestigious{' '}
-						<span className='purple'>National Institute of Technology Raipur</span>.
+						My educational journey began at{' '}
+						<Typography.Text className='purple'>Delhi Public School, Korba</Typography.Text>, and I earned
+						my bachelor&apos;s degree from the prestigious{' '}
+						<Typography.Text className='purple'>National Institute of Technology Raipur</Typography.Text>.
 						<br />
 						I have a strong passion for staying updated on the latest in technology and the business world.
 						Beyond coding, I find inspiration in travel and the wisdom found in books, particularly those
@@ -33,7 +35,7 @@ const AboutCard: React.FC = () => {
 						<br />
 						I&apos;m always eager to learn and grow together, feel free to reach out to me using any of
 						these platforms.
-					</p>
+					</Typography.Paragraph>
 				</blockquote>
 			</Card.Body>
 		</Card>

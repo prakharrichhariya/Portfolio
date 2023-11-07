@@ -31,6 +31,7 @@ const ResumeNew: React.FC = () => {
 						type='primary'
 						icon={<AiOutlineDownload />}
 						href={pdfFile}
+						className='download-button'
 						target='_blank'
 						style={{ maxWidth: '125px' }}
 					>
@@ -49,6 +50,7 @@ const ResumeNew: React.FC = () => {
 						type='primary'
 						icon={<AiOutlineDownload />}
 						href={pdfFile}
+						className='download-button'
 						target='_blank'
 						style={{ maxWidth: '125px' }}
 					>
